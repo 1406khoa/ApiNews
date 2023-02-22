@@ -4,10 +4,34 @@
   flex-direction: column;
   align-items: center;
   font-size: 20px;
+  padding: 10px 0 0px 0;
+  border: 1px solid;
+  margin: 10px 0 10px 0;
+  border-radius: 5px;
+  background-color: rgb(228, 228, 228);
 }
 
 #img{
   width: 50%;
   margin-bottom: 50px;
   margin-top: 50px ;
+}
+
+.a{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+
+#bg-img{
+  background-image: url('https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  height: calc(100% - 64px);
+
+  background-size: cover;
+}
+
+html,body{
+  height: 100%; background-image: url('https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1600');
 }

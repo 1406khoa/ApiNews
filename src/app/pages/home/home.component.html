@@ -1,10 +1,13 @@
 
-<div  *ngFor="let new of (new$ | async) ">
-  <div class="news-container" >
-
-      {{new.id}}
-      {{new.title}}
+<div class="a" *ngFor="let new of (new$ | async)?.news ">
+  <div class="news-container">
       {{new.description}}
+      {{new.title}}
       <img id="img" [src]="new.cover_image" alt="">
   </div>
+  <div id="bg-img">
+
+  </div>
+
+
 </div>

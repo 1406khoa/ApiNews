@@ -1,7 +1,12 @@
+import { GetPaginate } from './action/new.action';
+// import { GetNews } from './action/new.action';
+import { newState } from './state/new.state';
 import { Observable } from 'rxjs';
 import { User } from '@angular/fire/auth';
 import { AuthService } from 'src/app/services/Auth.service';
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+
 
 @Component({
   selector: 'app-root',
@@ -10,17 +15,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   title = 'ApiNews';
-  constructor(private authService: AuthService){}
+  new$ = new Observable<newState>()
+  constructor(private authService: AuthService){
 
+  }
 
   ngOnInit(): void {
-    this.user$= this.authService.user$;
+    this.user$ = this.authService.user$;
     this.user$.subscribe(user => {
       this.user = user;
-      console.log(user);
+      //console.log(user);
     })
 
-    console.log(this.user)
+    //console.log(this.user)
 
   }
   user!: User |null
@@ -35,6 +42,9 @@ export class AppComponent implements OnInit{
   {
     this.authService.logOut()
   }
+
+
+
 
 
 }
